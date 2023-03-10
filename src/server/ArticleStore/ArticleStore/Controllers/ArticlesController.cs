@@ -2,6 +2,7 @@ using ArticleStore.Services.Interfaces;
 using Microsoft.AspNetCore.Mvc;
 using Microsoft.Extensions.Logging;
 using System.Collections.Generic;
+using System.Threading.Tasks;
 
 namespace ArticleStore.Controllers
 {
@@ -18,8 +19,14 @@ namespace ArticleStore.Controllers
             _articleService = articleService;
         }
 
+        [HttpPost]
+        public void CreateArticles()
+        {
+            _articleService.UpdateArticlesAsync(new[] { new AggregatedArticle() { ArticleId = "1" } });
+        }
+
         [HttpGet]
-        public IEnumerable<AggregatedArticle> Get()
+        public IEnumerable<AggregatedArticle> GetArticles()
         {
             return _articleService.GetArticles();
         }

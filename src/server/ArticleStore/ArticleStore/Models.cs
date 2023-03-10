@@ -1,4 +1,5 @@
 using Newtonsoft.Json;
+using System.ComponentModel.DataAnnotations;
 
 namespace ArticleStore
 {
@@ -22,6 +23,7 @@ namespace ArticleStore
 
     public class AggregatedArticle
     {
+        [Key]
         public string ArticleId { get; set; }
         public string Brand { get; set; }
         public string Material { get; set; }
