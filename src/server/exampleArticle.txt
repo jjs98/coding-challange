@@ -1,0 +1,1588 @@
+{
+  "id": "88664035",
+  "articleId": "88664035",
+  "attributes": [
+    {
+      "key": "FAR",
+      "source": "PIM",
+      "value": "silber",
+      "label": "Farbe",
+      "language": "de"
+    },
+    {
+      "key": "FAR",
+      "source": "PIM",
+      "value": "zilver",
+      "label": "Farbe",
+      "language": "nl"
+    },
+    {
+      "key": "FAR",
+      "source": "PIM",
+      "value": "argenté",
+      "label": "Farbe",
+      "language": "fr"
+    },
+    {
+      "key": "FAR",
+      "source": "PIM",
+      "value": "silver",
+      "label": "Farbe",
+      "language": "sv"
+    },
+    {
+      "key": "FAR",
+      "source": "PIM",
+      "value": "sølv",
+      "label": "Farbe",
+      "language": "da"
+    },
+    {
+      "key": "FAR",
+      "source": "PIM",
+      "value": "argento",
+      "label": "Farbe",
+      "language": "it"
+    },
+    {
+      "key": "FAR",
+      "source": "PIM",
+      "value": "srebrny",
+      "label": "Farbe",
+      "language": "pl"
+    },
+    {
+      "key": "MAT",
+      "source": "PIM",
+      "value": "Edelstahl",
+      "label": "Material 1",
+      "language": "de"
+    },
+    {
+      "key": "MAT",
+      "source": "PIM",
+      "value": "Edelstaal",
+      "label": "Material 1",
+      "language": "nl"
+    },
+    {
+      "key": "MAT",
+      "source": "PIM",
+      "value": "Acier inoxydable",
+      "label": "Material 1",
+      "language": "fr"
+    },
+    {
+      "key": "MAT",
+      "source": "PIM",
+      "value": "Rostfritt stål",
+      "label": "Material 1",
+      "language": "sv"
+    },
+    {
+      "key": "MAT",
+      "source": "PIM",
+      "value": "Rustfrit stål",
+      "label": "Material 1",
+      "language": "da"
+    },
+    {
+      "key": "MAT",
+      "source": "PIM",
+      "value": "Acciaio inossidabile",
+      "label": "Material 1",
+      "language": "it"
+    },
+    {
+      "key": "MAT",
+      "source": "PIM",
+      "value": "Stal szlachetna",
+      "label": "Material 1",
+      "language": "pl"
+    },
+    {
+      "key": "AGR",
+      "source": "PIM",
+      "value": "adult",
+      "label": "Altersgruppe",
+      "language": "de"
+    },
+    {
+      "key": "AGR",
+      "source": "PIM",
+      "value": "adult",
+      "label": "Altersgruppe",
+      "language": "nl"
+    },
+    {
+      "key": "AGR",
+      "source": "PIM",
+      "value": "adultes",
+      "label": "Altersgruppe",
+      "language": "fr"
+    },
+    {
+      "key": "AGR",
+      "source": "PIM",
+      "value": "vuxen",
+      "label": "Altersgruppe",
+      "language": "sv"
+    },
+    {
+      "key": "AGR",
+      "source": "PIM",
+      "value": "adult",
+      "label": "Altersgruppe",
+      "language": "da"
+    },
+    {
+      "key": "AGR",
+      "source": "PIM",
+      "value": "",
+      "label": "Altersgruppe",
+      "language": "it"
+    },
+    {
+      "key": "AGR",
+      "source": "PIM",
+      "value": "",
+      "label": "Altersgruppe",
+      "language": "pl"
+    },
+    {
+      "key": "STIL",
+      "source": "PIM",
+      "value": "klassisch",
+      "label": "Stilrichtung",
+      "language": "de"
+    },
+    {
+      "key": "STIL",
+      "source": "PIM",
+      "value": "klassiek",
+      "label": "Stilrichtung",
+      "language": "nl"
+    },
+    {
+      "key": "STIL",
+      "source": "PIM",
+      "value": "classique",
+      "label": "Stilrichtung",
+      "language": "fr"
+    },
+    {
+      "key": "STIL",
+      "source": "PIM",
+      "value": "klassisk",
+      "label": "Stilrichtung",
+      "language": "sv"
+    },
+    {
+      "key": "STIL",
+      "source": "PIM",
+      "value": "klassisk",
+      "label": "Stilrichtung",
+      "language": "da"
+    },
+    {
+      "key": "STIL",
+      "source": "PIM",
+      "value": "classico",
+      "label": "Stilrichtung",
+      "language": "it"
+    },
+    {
+      "key": "STIL",
+      "source": "PIM",
+      "value": "klasyczne",
+      "label": "Stilrichtung",
+      "language": "pl"
+    },
+    {
+      "key": "ZIEL",
+      "source": "PIM",
+      "value": "Damen",
+      "label": "Zielgruppe",
+      "language": "de"
+    },
+    {
+      "key": "ZIEL",
+      "source": "PIM",
+      "value": "dames",
+      "label": "Zielgruppe",
+      "language": "nl"
+    },
+    {
+      "key": "ZIEL",
+      "source": "PIM",
+      "value": "femmes",
+      "label": "Zielgruppe",
+      "language": "fr"
+    },
+    {
+      "key": "ZIEL",
+      "source": "PIM",
+      "value": "dam",
+      "label": "Zielgruppe",
+      "language": "sv"
+    },
+    {
+      "key": "ZIEL",
+      "source": "PIM",
+      "value": "damer",
+      "label": "Zielgruppe",
+      "language": "da"
+    },
+    {
+      "key": "ZIEL",
+      "source": "PIM",
+      "value": "donna",
+      "label": "Zielgruppe",
+      "language": "it"
+    },
+    {
+      "key": "ZIEL",
+      "source": "PIM",
+      "value": "damski",
+      "label": "Zielgruppe",
+      "language": "pl"
+    },
+    {
+      "key": "BFA",
+      "source": "PIM",
+      "value": "rosé",
+      "label": "Bandfarbe",
+      "language": "de"
+    },
+    {
+      "key": "BFA",
+      "source": "PIM",
+      "value": "rozé",
+      "label": "Bandfarbe",
+      "language": "nl"
+    },
+    {
+      "key": "BFA",
+      "source": "PIM",
+      "value": "rosé",
+      "label": "Bandfarbe",
+      "language": "fr"
+    },
+    {
+      "key": "BFA",
+      "source": "PIM",
+      "value": "rosé",
+      "label": "Bandfarbe",
+      "language": "sv"
+    },
+    {
+      "key": "BFA",
+      "source": "PIM",
+      "value": "rose",
+      "label": "Bandfarbe",
+      "language": "da"
+    },
+    {
+      "key": "BFA",
+      "source": "PIM",
+      "value": "rosé",
+      "label": "Bandfarbe",
+      "language": "it"
+    },
+    {
+      "key": "BFA",
+      "source": "PIM",
+      "value": "rosé",
+      "label": "Bandfarbe",
+      "language": "pl"
+    },
+    {
+      "key": "ZBF",
+      "source": "PIM",
+      "value": "weiß",
+      "label": "Zifferblatt Farbe",
+      "language": "de"
+    },
+    {
+      "key": "ZBF",
+      "source": "PIM",
+      "value": "wit",
+      "label": "Zifferblatt Farbe",
+      "language": "nl"
+    },
+    {
+      "key": "ZBF",
+      "source": "PIM",
+      "value": "blanc",
+      "label": "Zifferblatt Farbe",
+      "language": "fr"
+    },
+    {
+      "key": "ZBF",
+      "source": "PIM",
+      "value": "vit",
+      "label": "Zifferblatt Farbe",
+      "language": "sv"
+    },
+    {
+      "key": "ZBF",
+      "source": "PIM",
+      "value": "hvid",
+      "label": "Zifferblatt Farbe",
+      "language": "da"
+    },
+    {
+      "key": "ZBF",
+      "source": "PIM",
+      "value": "bianco",
+      "label": "Zifferblatt Farbe",
+      "language": "it"
+    },
+    {
+      "key": "ZBF",
+      "source": "PIM",
+      "value": "biały",
+      "label": "Zifferblatt Farbe",
+      "language": "pl"
+    },
+    {
+      "key": "WRG_HYB",
+      "source": "PIM",
+      "value": "Damenuhr",
+      "label": "Warengruppe Hybris",
+      "language": "de"
+    },
+    {
+      "key": "WRG_HYB",
+      "source": "PIM",
+      "value": "Dameshorloge",
+      "label": "Warengruppe Hybris",
+      "language": "nl"
+    },
+    {
+      "key": "WRG_HYB",
+      "source": "PIM",
+      "value": "Montre pour femme",
+      "label": "Warengruppe Hybris",
+      "language": "fr"
+    },
+    {
+      "key": "WRG_HYB",
+      "source": "PIM",
+      "value": "Damklocka",
+      "label": "Warengruppe Hybris",
+      "language": "sv"
+    },
+    {
+      "key": "WRG_HYB",
+      "source": "PIM",
+      "value": "Dameur",
+      "label": "Warengruppe Hybris",
+      "language": "da"
+    },
+    {
+      "key": "WRG_HYB",
+      "source": "PIM",
+      "value": "Orologio da donna",
+      "label": "Warengruppe Hybris",
+      "language": "it"
+    },
+    {
+      "key": "WRG_HYB",
+      "source": "PIM",
+      "value": "Zegarek damski",
+      "label": "Warengruppe Hybris",
+      "language": "pl"
+    },
+    {
+      "key": "WHG_HYB",
+      "source": "PIM",
+      "value": "Uhren",
+      "label": "Warenhauptgruppe Hybris",
+      "language": "de"
+    },
+    {
+      "key": "WHG_HYB",
+      "source": "PIM",
+      "value": "Horloges",
+      "label": "Warenhauptgruppe Hybris",
+      "language": "nl"
+    },
+    {
+      "key": "WHG_HYB",
+      "source": "PIM",
+      "value": "Montres",
+      "label": "Warenhauptgruppe Hybris",
+      "language": "fr"
+    },
+    {
+      "key": "WHG_HYB",
+      "source": "PIM",
+      "value": "Klockor",
+      "label": "Warenhauptgruppe Hybris",
+      "language": "sv"
+    },
+    {
+      "key": "WHG_HYB",
+      "source": "PIM",
+      "value": "Ure",
+      "label": "Warenhauptgruppe Hybris",
+      "language": "da"
+    },
+    {
+      "key": "WHG_HYB",
+      "source": "PIM",
+      "value": "Orologi",
+      "label": "Warenhauptgruppe Hybris",
+      "language": "it"
+    },
+    {
+      "key": "WHG_HYB",
+      "source": "PIM",
+      "value": "Zegarki",
+      "label": "Warenhauptgruppe Hybris",
+      "language": "pl"
+    },
+    {
+      "key": "OED",
+      "source": "PIM",
+      "value": "poliert",
+      "label": "Oberflächenveredelung 1",
+      "language": "de"
+    },
+    {
+      "key": "OED",
+      "source": "PIM",
+      "value": "gepolijst",
+      "label": "Oberflächenveredelung 1",
+      "language": "nl"
+    },
+    {
+      "key": "OED",
+      "source": "PIM",
+      "value": "poli",
+      "label": "Oberflächenveredelung 1",
+      "language": "fr"
+    },
+    {
+      "key": "OED",
+      "source": "PIM",
+      "value": "polerat",
+      "label": "Oberflächenveredelung 1",
+      "language": "sv"
+    },
+    {
+      "key": "OED",
+      "source": "PIM",
+      "value": "poleret",
+      "label": "Oberflächenveredelung 1",
+      "language": "da"
+    },
+    {
+      "key": "OED",
+      "source": "PIM",
+      "value": "lucidato",
+      "label": "Oberflächenveredelung 1",
+      "language": "it"
+    },
+    {
+      "key": "OED",
+      "source": "PIM",
+      "value": "polerowane",
+      "label": "Oberflächenveredelung 1",
+      "language": "pl"
+    },
+    {
+      "key": "OPT",
+      "source": "PIM",
+      "value": "poliert",
+      "label": "Optik",
+      "language": "de"
+    },
+    {
+      "key": "OPT",
+      "source": "PIM",
+      "value": "gepolijst",
+      "label": "Optik",
+      "language": "nl"
+    },
+    {
+      "key": "OPT",
+      "source": "PIM",
+      "value": "poli",
+      "label": "Optik",
+      "language": "fr"
+    },
+    {
+      "key": "OPT",
+      "source": "PIM",
+      "value": "polerat",
+      "label": "Optik",
+      "language": "sv"
+    },
+    {
+      "key": "OPT",
+      "source": "PIM",
+      "value": "poleret",
+      "label": "Optik",
+      "language": "da"
+    },
+    {
+      "key": "OPT",
+      "source": "PIM",
+      "value": "lucidato",
+      "label": "Optik",
+      "language": "it"
+    },
+    {
+      "key": "OPT",
+      "source": "PIM",
+      "value": "polerowane",
+      "label": "Optik",
+      "language": "pl"
+    },
+    {
+      "key": "TYPU",
+      "source": "PIM",
+      "value": "Klassikuhr",
+      "label": "Anwendungsbereich",
+      "language": "de"
+    },
+    {
+      "key": "TYPU",
+      "source": "PIM",
+      "value": "Klassiek horloge",
+      "label": "Anwendungsbereich",
+      "language": "nl"
+    },
+    {
+      "key": "TYPU",
+      "source": "PIM",
+      "value": "Montre classique",
+      "label": "Anwendungsbereich",
+      "language": "fr"
+    },
+    {
+      "key": "TYPU",
+      "source": "PIM",
+      "value": "Klassisk klocka",
+      "label": "Anwendungsbereich",
+      "language": "sv"
+    },
+    {
+      "key": "TYPU",
+      "source": "PIM",
+      "value": "Klassisk ur",
+      "label": "Anwendungsbereich",
+      "language": "da"
+    },
+    {
+      "key": "TYPU",
+      "source": "PIM",
+      "value": "Orologio classico",
+      "label": "Anwendungsbereich",
+      "language": "it"
+    },
+    {
+      "key": "TYPU",
+      "source": "PIM",
+      "value": "Zegarek klasyczny",
+      "label": "Anwendungsbereich",
+      "language": "pl"
+    },
+    {
+      "key": "BMAT",
+      "source": "PIM",
+      "value": "Leder",
+      "label": "Bandmaterial",
+      "language": "de"
+    },
+    {
+      "key": "BMAT",
+      "source": "PIM",
+      "value": "Leer",
+      "label": "Bandmaterial",
+      "language": "nl"
+    },
+    {
+      "key": "BMAT",
+      "source": "PIM",
+      "value": "Cuir",
+      "label": "Bandmaterial",
+      "language": "fr"
+    },
+    {
+      "key": "BMAT",
+      "source": "PIM",
+      "value": "Läder",
+      "label": "Bandmaterial",
+      "language": "sv"
+    },
+    {
+      "key": "BMAT",
+      "source": "PIM",
+      "value": "Læder",
+      "label": "Bandmaterial",
+      "language": "da"
+    },
+    {
+      "key": "BMAT",
+      "source": "PIM",
+      "value": "Pelle",
+      "label": "Bandmaterial",
+      "language": "it"
+    },
+    {
+      "key": "BMAT",
+      "source": "PIM",
+      "value": "Skóra",
+      "label": "Bandmaterial",
+      "language": "pl"
+    },
+    {
+      "key": "GEF",
+      "source": "PIM",
+      "value": "rund",
+      "label": "Gehäuseform",
+      "language": "de"
+    },
+    {
+      "key": "GEF",
+      "source": "PIM",
+      "value": "rond",
+      "label": "Gehäuseform",
+      "language": "nl"
+    },
+    {
+      "key": "GEF",
+      "source": "PIM",
+      "value": "rond",
+      "label": "Gehäuseform",
+      "language": "fr"
+    },
+    {
+      "key": "GEF",
+      "source": "PIM",
+      "value": "rund",
+      "label": "Gehäuseform",
+      "language": "sv"
+    },
+    {
+      "key": "GEF",
+      "source": "PIM",
+      "value": "rund",
+      "label": "Gehäuseform",
+      "language": "da"
+    },
+    {
+      "key": "GEF",
+      "source": "PIM",
+      "value": "tondo",
+      "label": "Gehäuseform",
+      "language": "it"
+    },
+    {
+      "key": "GEF",
+      "source": "PIM",
+      "value": "okrągła",
+      "label": "Gehäuseform",
+      "language": "pl"
+    },
+    {
+      "key": "GSA",
+      "source": "PIM",
+      "value": "Mineralglas",
+      "label": "Glasart",
+      "language": "de"
+    },
+    {
+      "key": "GSA",
+      "source": "PIM",
+      "value": "Mineraalglas",
+      "label": "Glasart",
+      "language": "nl"
+    },
+    {
+      "key": "GSA",
+      "source": "PIM",
+      "value": "Verre minéral",
+      "label": "Glasart",
+      "language": "fr"
+    },
+    {
+      "key": "GSA",
+      "source": "PIM",
+      "value": "Mineralglas",
+      "label": "Glasart",
+      "language": "sv"
+    },
+    {
+      "key": "GSA",
+      "source": "PIM",
+      "value": "Mineralglas",
+      "label": "Glasart",
+      "language": "da"
+    },
+    {
+      "key": "GSA",
+      "source": "PIM",
+      "value": "Vetro minerale",
+      "label": "Glasart",
+      "language": "it"
+    },
+    {
+      "key": "GSA",
+      "source": "PIM",
+      "value": "Szkło mineralne",
+      "label": "Glasart",
+      "language": "pl"
+    },
+    {
+      "key": "SAR",
+      "source": "PIM",
+      "value": "Dornschließe",
+      "label": "Schließenart",
+      "language": "de"
+    },
+    {
+      "key": "SAR",
+      "source": "PIM",
+      "value": "Gesp",
+      "label": "Schließenart",
+      "language": "nl"
+    },
+    {
+      "key": "SAR",
+      "source": "PIM",
+      "value": "Boucle ardillon",
+      "label": "Schließenart",
+      "language": "fr"
+    },
+    {
+      "key": "SAR",
+      "source": "PIM",
+      "value": "Stiftspänne",
+      "label": "Schließenart",
+      "language": "sv"
+    },
+    {
+      "key": "SAR",
+      "source": "PIM",
+      "value": "Spændelås",
+      "label": "Schließenart",
+      "language": "da"
+    },
+    {
+      "key": "SAR",
+      "source": "PIM",
+      "value": "Fibbia a tamburo",
+      "label": "Schließenart",
+      "language": "it"
+    },
+    {
+      "key": "SAR",
+      "source": "PIM",
+      "value": "Klamra tangowa",
+      "label": "Schließenart",
+      "language": "pl"
+    },
+    {
+      "key": "TAF",
+      "source": "PIM",
+      "value": "Quarz",
+      "label": "Technische Ausführung",
+      "language": "de"
+    },
+    {
+      "key": "TAF",
+      "source": "PIM",
+      "value": "Quartz",
+      "label": "Technische Ausführung",
+      "language": "nl"
+    },
+    {
+      "key": "TAF",
+      "source": "PIM",
+      "value": "Quartz",
+      "label": "Technische Ausführung",
+      "language": "fr"
+    },
+    {
+      "key": "TAF",
+      "source": "PIM",
+      "value": "Kvarts",
+      "label": "Technische Ausführung",
+      "language": "sv"
+    },
+    {
+      "key": "TAF",
+      "source": "PIM",
+      "value": "Quarz",
+      "label": "Technische Ausführung",
+      "language": "da"
+    },
+    {
+      "key": "TAF",
+      "source": "PIM",
+      "value": "quarzo",
+      "label": "Technische Ausführung",
+      "language": "it"
+    },
+    {
+      "key": "TAF",
+      "source": "PIM",
+      "value": "Kwarcowy",
+      "label": "Technische Ausführung",
+      "language": "pl"
+    },
+    {
+      "key": "WAD",
+      "source": "PIM",
+      "value": "3bar",
+      "label": "Wasserdichte in bar",
+      "language": "de"
+    },
+    {
+      "key": "WAD",
+      "source": "PIM",
+      "value": "3 bar",
+      "label": "Wasserdichte in bar",
+      "language": "nl"
+    },
+    {
+      "key": "WAD",
+      "source": "PIM",
+      "value": "3 bars",
+      "label": "Wasserdichte in bar",
+      "language": "fr"
+    },
+    {
+      "key": "WAD",
+      "source": "PIM",
+      "value": "3bar",
+      "label": "Wasserdichte in bar",
+      "language": "sv"
+    },
+    {
+      "key": "WAD",
+      "source": "PIM",
+      "value": "3 bar",
+      "label": "Wasserdichte in bar",
+      "language": "da"
+    },
+    {
+      "key": "WAD",
+      "source": "PIM",
+      "value": "3 bar",
+      "label": "Wasserdichte in bar",
+      "language": "it"
+    },
+    {
+      "key": "WAD",
+      "source": "PIM",
+      "value": "3 bar",
+      "label": "Wasserdichte in bar",
+      "language": "pl"
+    },
+    {
+      "key": "WKA",
+      "source": "PIM",
+      "value": "Miyota",
+      "label": "Werkart",
+      "language": "de"
+    },
+    {
+      "key": "WKA",
+      "source": "PIM",
+      "value": "Miyota",
+      "label": "Werkart",
+      "language": "nl"
+    },
+    {
+      "key": "WKA",
+      "source": "PIM",
+      "value": "Miyota",
+      "label": "Werkart",
+      "language": "fr"
+    },
+    {
+      "key": "WKA",
+      "source": "PIM",
+      "value": "Miyota",
+      "label": "Werkart",
+      "language": "sv"
+    },
+    {
+      "key": "WKA",
+      "source": "PIM",
+      "value": "Miyota",
+      "label": "Werkart",
+      "language": "da"
+    },
+    {
+      "key": "WKA",
+      "source": "PIM",
+      "value": "Miyota",
+      "label": "Werkart",
+      "language": "it"
+    },
+    {
+      "key": "WKA",
+      "source": "PIM",
+      "value": "Miyota",
+      "label": "Werkart",
+      "language": "pl"
+    },
+    {
+      "key": "ZBA",
+      "source": "PIM",
+      "value": "Analog",
+      "label": "Zifferblatt Anzeige",
+      "language": "de"
+    },
+    {
+      "key": "ZBA",
+      "source": "PIM",
+      "value": "Analoog",
+      "label": "Zifferblatt Anzeige",
+      "language": "nl"
+    },
+    {
+      "key": "ZBA",
+      "source": "PIM",
+      "value": "Analogique",
+      "label": "Zifferblatt Anzeige",
+      "language": "fr"
+    },
+    {
+      "key": "ZBA",
+      "source": "PIM",
+      "value": "Analog",
+      "label": "Zifferblatt Anzeige",
+      "language": "sv"
+    },
+    {
+      "key": "ZBA",
+      "source": "PIM",
+      "value": "Analog",
+      "label": "Zifferblatt Anzeige",
+      "language": "da"
+    },
+    {
+      "key": "ZBA",
+      "source": "PIM",
+      "value": "Analogico",
+      "label": "Zifferblatt Anzeige",
+      "language": "it"
+    },
+    {
+      "key": "ZBA",
+      "source": "PIM",
+      "value": "Analogowy",
+      "label": "Zifferblatt Anzeige",
+      "language": "pl"
+    },
+    {
+      "key": "VFAR",
+      "source": "PIM",
+      "value": "gelbgold",
+      "label": "Variantenfarbe_neu",
+      "language": "de"
+    },
+    {
+      "key": "VFAR",
+      "source": "PIM",
+      "value": "geelgoud",
+      "label": "Variantenfarbe_neu",
+      "language": "nl"
+    },
+    {
+      "key": "VFAR",
+      "source": "PIM",
+      "value": "or jaune",
+      "label": "Variantenfarbe_neu",
+      "language": "fr"
+    },
+    {
+      "key": "VFAR",
+      "source": "PIM",
+      "value": "gult guld",
+      "label": "Variantenfarbe_neu",
+      "language": "sv"
+    },
+    {
+      "key": "VFAR",
+      "source": "PIM",
+      "value": "gul guld",
+      "label": "Variantenfarbe_neu",
+      "language": "da"
+    },
+    {
+      "key": "VFAR",
+      "source": "PIM",
+      "value": "oro giallo",
+      "label": "Variantenfarbe_neu",
+      "language": "it"
+    },
+    {
+      "key": "VFAR",
+      "source": "PIM",
+      "value": "żółte złoto",
+      "label": "Variantenfarbe_neu",
+      "language": "pl"
+    },
+    {
+      "key": "MITMAS_NEWE",
+      "source": "PIM",
+      "value": "50",
+      "label": "Nettogewicht in g",
+      "language": null
+    },
+    {
+      "key": "SHOP",
+      "source": "PIM",
+      "value": "christ.at/UNAPPROVED, christ.de/UNAPPROVED, brinckmann-lange.de/UNAPPROVED, valmano.de/UNAPPROVED, valmano.at/UNAPPROVED, valmano.nl/UNAPPROVED, valmano.fr/UNAPPROVED, valmano.be/UNAPPROVED, valmano.se/UNAPPROVED, valmano.dk/UNAPPROVED, valmano.it/UNAPPROVED, valmano.pl/UNAPPROVED",
+      "label": "Shop Zuordnung",
+      "language": null
+    },
+    {
+      "key": "VKAL",
+      "source": "PIM",
+      "value": "christ.at/ONLINE_AND_POS, christ.de/ONLINE_AND_POS",
+      "label": "Vertrieb allgemein",
+      "language": null
+    },
+    {
+      "key": "GOL",
+      "source": "PIM",
+      "value": "15.02.2023",
+      "label": "Go-Live Datum",
+      "language": null
+    },
+    {
+      "key": "MKP",
+      "source": "PIM",
+      "value": "Zalando.fr (Valmano)/true, Zalando.nl (Valmano)/true, Zalando.be (Valmano)/true, Zalando.dk (Valmano)/true, Zalando.se (Valmano)/true",
+      "label": "Marktplatz Zuordnung",
+      "language": null
+    },
+    {
+      "key": "MITMAS_CFI4",
+      "source": "PIM",
+      "value": "2023",
+      "label": "Kollektionsjahr",
+      "language": null
+    },
+    {
+      "key": "BLG",
+      "source": "PIM",
+      "value": "23,5",
+      "label": "Bandlänge in cm",
+      "language": null
+    },
+    {
+      "key": "BVA",
+      "source": "PIM",
+      "value": "16",
+      "label": "Bandverlauf Anstoß in mm",
+      "language": null
+    },
+    {
+      "key": "GDI",
+      "source": "PIM",
+      "value": "8",
+      "label": "Gehäuse Dicke in mm",
+      "language": null
+    },
+    {
+      "key": "GDM",
+      "source": "PIM",
+      "value": "34",
+      "label": "Gehäuse Durchmesser in mm",
+      "language": null
+    },
+    {
+      "key": "OPRBAS_SAPR_für_PRRF_EQ_B1",
+      "source": "PIM",
+      "value": "79,9",
+      "label": "B1 (UVP DE)",
+      "language": null
+    },
+    {
+      "key": "MPAGRL_PUPR_für_SUNO_aus_MITBAL_LO_CH1",
+      "source": "PIM",
+      "value": "19,7",
+      "label": "Lieferantenpreis für Division 150",
+      "language": null
+    },
+    {
+      "key": "MPAGRL_PUPR_für_SUNO_aus_MITBAL_LO_CH2",
+      "source": "PIM",
+      "value": "19,7",
+      "label": "Lieferantenpreis für Division 750",
+      "language": null
+    },
+    {
+      "key": "MPAGRL_PUPR_für_SUNO_aus_MITBAL_LO_CH3",
+      "source": "PIM",
+      "value": "19,7",
+      "label": "Lieferantenpreis für Division 850",
+      "language": null
+    },
+    {
+      "key": "MITMAS_STAT",
+      "source": "PIM",
+      "value": "20",
+      "label": "Status",
+      "language": null
+    },
+    {
+      "key": "VAR_FAR",
+      "source": "PIM",
+      "value": "32023363",
+      "label": "Farbvariante",
+      "language": null
+    },
+    {
+      "key": "BUNDLVERPACKUNG",
+      "source": "PIM",
+      "value": "99999999",
+      "label": "BundL Verpackung",
+      "language": null
+    },
+    {
+      "key": "ECOMVERPACKUNG",
+      "source": "PIM",
+      "value": "88678923",
+      "label": "E-Com Verpackung",
+      "language": null
+    },
+    {
+      "key": "ATN",
+      "source": "PIM",
+      "value": "40",
+      "label": "Anzahl Tage Neuheit",
+      "language": null
+    },
+    {
+      "key": "WSR",
+      "source": "PIM",
+      "value": "ESLW23700SI",
+      "label": "Wholesale Referenz",
+      "language": null
+    },
+    {
+      "key": "WSH",
+      "source": "PIM",
+      "value": "L0104831X38932",
+      "label": "Wholesale Hierarchie",
+      "language": null
+    },
+    {
+      "key": "MITMAS_FUDS",
+      "source": "PIM",
+      "value": "Esprit Edelstahl",
+      "label": "Artikelbeschreibung",
+      "language": null
+    },
+    {
+      "key": "MITMAS_ITDS",
+      "source": "PIM",
+      "value": "ES Everyday - SI Rose White",
+      "label": "Artikelbezeichnung",
+      "language": null
+    },
+    {
+      "key": "WRB_2",
+      "source": "PIM",
+      "value": "ESPRIT Time",
+      "label": "Warenbereich",
+      "language": null
+    },
+    {
+      "key": "WRB_1",
+      "source": "PIM",
+      "value": "550",
+      "label": "Warenbereich ID",
+      "language": null
+    },
+    {
+      "key": "WRG_2",
+      "source": "PIM",
+      "value": "Uhr mit Lederband",
+      "label": "Warengruppe",
+      "language": null
+    },
+    {
+      "key": "WRG_1",
+      "source": "PIM",
+      "value": "302",
+      "label": "Warengruppe ID",
+      "language": null
+    },
+    {
+      "key": "WHG_2",
+      "source": "PIM",
+      "value": "Damenuhren",
+      "label": "Warenhauptgruppe",
+      "language": null
+    },
+    {
+      "key": "WHG_1",
+      "source": "PIM",
+      "value": "DAU",
+      "label": "Warenhauptgruppe ID",
+      "language": null
+    },
+    {
+      "key": "WRL_2",
+      "source": "PIM",
+      "value": "Kleinuhren",
+      "label": "Warenlinie",
+      "language": null
+    },
+    {
+      "key": "WRL_1",
+      "source": "PIM",
+      "value": "KLU",
+      "label": "Warenlinie ID",
+      "language": null
+    },
+    {
+      "key": "MITMAS_POPN",
+      "source": "PIM",
+      "value": "4064721906719",
+      "label": "EAN/UPC-Nummer",
+      "language": null
+    },
+    {
+      "key": "MITPOP_POPN_für_SUNO_für_CH1",
+      "source": "PIM",
+      "value": "N0036A",
+      "label": "Referenznummer für CH1",
+      "language": null
+    },
+    {
+      "key": "MITPOP_POPN_für_SUNO_für_CH2",
+      "source": "PIM",
+      "value": "N0036A",
+      "label": "Referenznummer für CH2",
+      "language": null
+    },
+    {
+      "key": "MITPOP_POPN_für_SUNO_für_CH3",
+      "source": "PIM",
+      "value": "N0036A",
+      "label": "Referenznummer für CH3",
+      "language": null
+    },
+    {
+      "key": "MPAGRL_CUCD_für_SUNO_aus_MITBAL_LO_CH1",
+      "source": "PIM",
+      "value": "USD",
+      "label": "Währung für Division 150",
+      "language": null
+    },
+    {
+      "key": "MPAGRL_CUCD_für_SUNO_aus_MITBAL_LO_CH2",
+      "source": "PIM",
+      "value": "USD",
+      "label": "Währung für Division 750",
+      "language": null
+    },
+    {
+      "key": "MPAGRL_CUCD_für_SUNO_aus_MITBAL_LO_CH3",
+      "source": "PIM",
+      "value": "USD",
+      "label": "Währung für Division 850",
+      "language": null
+    },
+    {
+      "key": "MITBAL_SUNO_für_CH1",
+      "source": "PIM",
+      "value": "204557",
+      "label": "Lieferant für CH1",
+      "language": null
+    },
+    {
+      "key": "MITBAL_SUNO_für_CH2",
+      "source": "PIM",
+      "value": "204557",
+      "label": "Lieferant für CH2",
+      "language": null
+    },
+    {
+      "key": "MITBAL_SUNO_für_CH3",
+      "source": "PIM",
+      "value": "204557",
+      "label": "Lieferant für CH3",
+      "language": null
+    },
+    {
+      "key": "ITCL",
+      "source": "PIM",
+      "value": "S20",
+      "label": "PLZ Status",
+      "language": null
+    },
+    {
+      "key": "ZITFAC_ZFD2_für_CH1",
+      "source": "PIM",
+      "value": "ESLWL",
+      "label": "SelKZ für CH1",
+      "language": null
+    },
+    {
+      "key": "ZITFAC_ZFD2_für_CH2",
+      "source": "PIM",
+      "value": "ESLWL",
+      "label": "SelKZ für CH2",
+      "language": null
+    },
+    {
+      "key": "ZITFAC_ZFD2_für_CH3",
+      "source": "PIM",
+      "value": "ESLWL",
+      "label": "SelKZ für CH3",
+      "language": null
+    },
+    {
+      "key": "CSNO_für_CH1",
+      "source": "PIM",
+      "value": "91022100",
+      "label": "Zollstatistik für CH1",
+      "language": null
+    },
+    {
+      "key": "CSNO_für_CH2",
+      "source": "PIM",
+      "value": "91022100",
+      "label": "Zollstatistik für CH2",
+      "language": null
+    },
+    {
+      "key": "CSNO_für_CH3",
+      "source": "PIM",
+      "value": "91022100",
+      "label": "Zollstatistik für CH3",
+      "language": null
+    },
+    {
+      "key": "PGR",
+      "source": "PIM",
+      "value": "Z",
+      "label": "Planungsgruppe",
+      "language": null
+    },
+    {
+      "key": "VGR",
+      "source": "PIM",
+      "value": "34",
+      "label": "Variantengröße",
+      "language": null
+    },
+    {
+      "key": "MITMAS_ITNO",
+      "source": "PIM",
+      "value": "88664035",
+      "label": "Artikelnummer",
+      "language": null
+    },
+    {
+      "key": "KAL",
+      "source": "PIM",
+      "value": "2035",
+      "label": "Kaliber",
+      "language": null
+    },
+    {
+      "key": "MRK",
+      "source": "PIM",
+      "value": "ESPRIT",
+      "label": "Marke",
+      "language": null
+    },
+    {
+      "key": "MAA",
+      "source": "PIM",
+      "value": "Eigenmarke",
+      "label": "Markenart",
+      "language": null
+    },
+    {
+      "key": "NAH",
+      "source": "PIM",
+      "value": "Nein",
+      "label": "Nachhaltigkeit",
+      "language": null
+    },
+    {
+      "key": "MITBAL_PUIT_für_CH1",
+      "source": "PIM",
+      "value": "Verteilt",
+      "label": "Beschaffungs-Code für CH1",
+      "language": null
+    },
+    {
+      "key": "MITBAL_PUIT_für_CH2",
+      "source": "PIM",
+      "value": "Verteilt",
+      "label": "Beschaffungs-Code für CH2",
+      "language": null
+    },
+    {
+      "key": "MITBAL_PUIT_für_CH3",
+      "source": "PIM",
+      "value": "Verteilt",
+      "label": "Beschaffungs-Code für CH3",
+      "language": null
+    },
+    {
+      "key": "CAT",
+      "source": "PIM",
+      "value": "Fashion",
+      "label": "Category",
+      "language": null
+    },
+    {
+      "key": "ZITFAC_ZKWR_für_CH1",
+      "source": "PIM",
+      "value": "nein",
+      "label": "K-Ware für CH1",
+      "language": null
+    },
+    {
+      "key": "ZITFAC_ZKWR_für_CH2",
+      "source": "PIM",
+      "value": "nein",
+      "label": "K-Ware für CH2",
+      "language": null
+    },
+    {
+      "key": "ZITFAC_ZKWR_für_CH3",
+      "source": "PIM",
+      "value": "nein",
+      "label": "K-Ware für CH3",
+      "language": null
+    },
+    {
+      "key": "ZITFAC_ZMDL_für_CH1",
+      "source": "PIM",
+      "value": "leer",
+      "label": "Punzierung für CH1",
+      "language": null
+    },
+    {
+      "key": "ZITFAC_ZMDL_für_CH2",
+      "source": "PIM",
+      "value": "J - Punzierung",
+      "label": "Punzierung für CH2",
+      "language": null
+    },
+    {
+      "key": "ZITFAC_ZMDL_für_CH3",
+      "source": "PIM",
+      "value": "J - Punzierung",
+      "label": "Punzierung für CH3",
+      "language": null
+    },
+    {
+      "key": "STF",
+      "source": "PIM",
+      "value": "Ware",
+      "label": "SALES_TYPE_FUNCTION",
+      "language": null
+    },
+    {
+      "key": "ZITFAC_ZSKZ_für_CH1",
+      "source": "PIM",
+      "value": "KSO - Kernsortiment",
+      "label": "SortKZ für CH1",
+      "language": null
+    },
+    {
+      "key": "ZITFAC_ZSKZ_für_CH2",
+      "source": "PIM",
+      "value": "KSO - Kernsortiment",
+      "label": "SortKZ für CH2",
+      "language": null
+    },
+    {
+      "key": "ZITFAC_ZSKZ_für_CH3",
+      "source": "PIM",
+      "value": "KSO - Kernsortiment",
+      "label": "SortKZ für CH3",
+      "language": null
+    },
+    {
+      "key": "ORCO_für_CH1",
+      "source": "PIM",
+      "value": "China",
+      "label": "Ursprungsland für CH1",
+      "language": null
+    },
+    {
+      "key": "ORCO_für_CH2",
+      "source": "PIM",
+      "value": "China",
+      "label": "Ursprungsland für CH2",
+      "language": null
+    },
+    {
+      "key": "ORCO_für_CH3",
+      "source": "PIM",
+      "value": "China",
+      "label": "Ursprungsland für CH3",
+      "language": null
+    },
+    {
+      "key": "ZITFAC_ZFD1_für_CH1",
+      "source": "PIM",
+      "value": "",
+      "label": "Verantw. Marke für CH1",
+      "language": null
+    },
+    {
+      "key": "ZITFAC_ZFD1_für_CH2",
+      "source": "PIM",
+      "value": "ESPRIT",
+      "label": "Verantw. Marke für CH2",
+      "language": null
+    },
+    {
+      "key": "ZITFAC_ZFD1_für_CH3",
+      "source": "PIM",
+      "value": "ESPRIT",
+      "label": "Verantw. Marke für CH3",
+      "language": null
+    },
+    {
+      "key": "GGV",
+      "source": "PIM",
+      "value": "Präsentbeutel L (Large)",
+      "label": "Kostenlose Geschenkverpackung",
+      "language": null
+    },
+    {
+      "key": "KGV",
+      "source": "PIM",
+      "value": "CHRIST Pop Up Box Gr. 4 - XL, CHRIST Pop Up Box Gr. 4 - XL - X-Mas-Edition",
+      "label": "Kostenpflichtige Geschenkverpackung",
+      "language": null
+    },
+    {
+      "key": "VPW",
+      "source": "PIM",
+      "value": "false",
+      "label": "Verpackte Ware",
+      "language": null
+    },
+    {
+      "key": "WSM",
+      "source": "PIM",
+      "value": "true",
+      "label": "Wholesale Freigabe",
+      "language": null
+    }
+  ]
+}
