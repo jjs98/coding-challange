@@ -20,6 +20,15 @@ namespace ArticleStore
             // Learn more about configuring Swagger/OpenAPI at https://aka.ms/aspnetcore/swashbuckle
             builder.Services.AddEndpointsApiExplorer();
             builder.Services.AddSwaggerGen();
+            builder.Services.AddSwaggerDocument(settings =>
+            {
+                settings.PostProcess = document =>
+                {
+                    document.Info.Version = "v1";
+                    document.Info.Title = "ArticleStore";
+                };
+            });
+
 
             builder.Services.AddDbContext<ApplicationDbContext>(
                 options => options.UseSqlServer(builder.Configuration.GetConnectionString("Default")), ServiceLifetime.Singleton);
@@ -31,14 +40,14 @@ namespace ArticleStore
             var app = builder.Build();
 
             var articleService = app.Services.GetService<IArticleService>();
-            _ = new FetchDataService(articleService);
+            //_ = new FetchDataService(articleService);
 
             // Configure the HTTP request pipeline.
             if (app.Environment.IsDevelopment())
             {
             }
-            app.UseSwagger();
-            app.UseSwaggerUI();
+            app.UseOpenApi();
+            app.UseSwaggerUi3();
 
             app.UseHttpsRedirection();
 

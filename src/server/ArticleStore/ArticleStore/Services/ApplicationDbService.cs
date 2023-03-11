@@ -15,7 +15,7 @@ namespace ArticleStore.Services
         {
             _dbContext = dbContext;
             _logger = logger;
-            _dbContext.Database.EnsureCreated();
+            //_dbContext.Database.EnsureCreated();
         }
 
         public async Task<bool> CreateArticleAsync(AggregatedArticle article)

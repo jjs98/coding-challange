@@ -1,0 +1,222 @@
+{
+  "x-generator": "NSwag v13.18.2.0 (NJsonSchema v10.8.0.0 (Newtonsoft.Json v13.0.0.0))",
+  "swagger": "2.0",
+  "info": {
+    "title": "ArticleStore",
+    "description": "API for fetching articles.",
+    "version": "v1"
+  },
+  "paths": {
+    "/api/Articles/Count": {
+      "get": {
+        "tags": [
+          "Articles"
+        ],
+        "operationId": "Articles_GetArticlesCount",
+        "produces": [
+          "text/plain",
+          "application/json",
+          "text/json"
+        ],
+        "responses": {
+          "200": {
+            "x-nullable": false,
+            "description": "",
+            "schema": {
+              "type": "array",
+              "items": {
+                "type": "integer",
+                "format": "int32"
+              }
+            }
+          }
+        }
+      }
+    },
+    "/api/Articles": {
+      "get": {
+        "tags": [
+          "Articles"
+        ],
+        "operationId": "Articles_GetArticles",
+        "produces": [
+          "text/plain",
+          "application/json",
+          "text/json"
+        ],
+        "responses": {
+          "200": {
+            "x-nullable": false,
+            "description": "",
+            "schema": {
+              "type": "array",
+              "items": {
+                "$ref": "#/definitions/AggregatedArticle"
+              }
+            }
+          }
+        }
+      },
+      "put": {
+        "tags": [
+          "Articles"
+        ],
+        "operationId": "Articles_CreateArticle",
+        "consumes": [
+          "application/json",
+          "text/json",
+          "application/*+json"
+        ],
+        "parameters": [
+          {
+            "name": "article",
+            "in": "body",
+            "required": true,
+            "schema": {
+              "$ref": "#/definitions/AggregatedArticle"
+            },
+            "x-nullable": false
+          }
+        ],
+        "responses": {
+          "200": {
+            "x-nullable": true,
+            "description": "",
+            "schema": {
+              "type": "file"
+            }
+          }
+        }
+      },
+      "post": {
+        "tags": [
+          "Articles"
+        ],
+        "operationId": "Articles_UpdateArticle",
+        "consumes": [
+          "application/json",
+          "text/json",
+          "application/*+json"
+        ],
+        "parameters": [
+          {
+            "name": "article",
+            "in": "body",
+            "required": true,
+            "schema": {
+              "$ref": "#/definitions/AggregatedArticle"
+            },
+            "x-nullable": false
+          }
+        ],
+        "responses": {
+          "200": {
+            "x-nullable": true,
+            "description": "",
+            "schema": {
+              "type": "file"
+            }
+          }
+        }
+      }
+    },
+    "/api/Articles/{articleId}": {
+      "get": {
+        "tags": [
+          "Articles"
+        ],
+        "operationId": "Articles_GetArticle",
+        "produces": [
+          "text/plain",
+          "application/json",
+          "text/json"
+        ],
+        "parameters": [
+          {
+            "type": "string",
+            "name": "articleId",
+            "in": "path",
+            "required": true,
+            "x-nullable": true
+          }
+        ],
+        "responses": {
+          "200": {
+            "x-nullable": false,
+            "description": "",
+            "schema": {
+              "$ref": "#/definitions/AggregatedArticle"
+            }
+          }
+        }
+      },
+      "delete": {
+        "tags": [
+          "Articles"
+        ],
+        "operationId": "Articles_DeleteArticle",
+        "parameters": [
+          {
+            "type": "string",
+            "name": "articleId",
+            "in": "path",
+            "required": true,
+            "x-nullable": true
+          }
+        ],
+        "responses": {
+          "200": {
+            "x-nullable": true,
+            "description": "",
+            "schema": {
+              "type": "file"
+            }
+          }
+        }
+      }
+    }
+  },
+  "definitions": {
+    "AggregatedArticle": {
+      "type": "object",
+      "properties": {
+        "articleId": {
+          "type": "string"
+        },
+        "brand": {
+          "type": "string"
+        },
+        "material": {
+          "type": "string"
+        },
+        "secondMaterial": {
+          "type": "string"
+        },
+        "thirdMaterial": {
+          "type": "string"
+        },
+        "alloy": {
+          "type": "string"
+        },
+        "secondAlloy": {
+          "type": "string"
+        },
+        "thirdAlloy": {
+          "type": "string"
+        },
+        "collection": {
+          "type": "string"
+        },
+        "productGroup": {
+          "type": "string"
+        },
+        "mainProductGroup": {
+          "type": "string"
+        },
+        "target": {
+          "type": "string"
+        }
+      }
+    }
+  }
+}
