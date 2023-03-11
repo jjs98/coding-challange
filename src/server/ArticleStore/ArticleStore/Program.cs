@@ -25,13 +25,13 @@ namespace ArticleStore
                 options => options.UseSqlServer(builder.Configuration.GetConnectionString("Default")), ServiceLifetime.Singleton);
             builder.Services.AddDatabaseDeveloperPageExceptionFilter();
 
+            builder.Services.AddSingleton<IApplicationDbService, ApplicationDbService>();
             builder.Services.AddSingleton<IArticleService, ArticlesService>();
 
             var app = builder.Build();
 
-            // Start Fetch of data
             var articleService = app.Services.GetService<IArticleService>();
-            _ = new UpdateService(articleService);
+            _ = new FetchDataService(articleService);
 
             // Configure the HTTP request pipeline.
             if (app.Environment.IsDevelopment())

@@ -23,18 +23,23 @@ namespace ArticleStore.Services
             return new AggregatedArticle()
             {
                 ArticleId = article.ArticleId,
-                Brand = article.Attributes.FirstOrDefault(x => x.Key == "MRK")?.Value,
-                Material = article.Attributes.FirstOrDefault(x => x.Key == "MAT")?.Value,
-                SecondMaterial = article.Attributes.FirstOrDefault(x => x.Key == "MAT2")?.Value,
-                ThirdMaterial = article.Attributes.FirstOrDefault(x => x.Key == "MA3")?.Value,
-                Alloy = article.Attributes.FirstOrDefault(x => x.Key == "LEG")?.Value,
-                SecondAlloy = article.Attributes.FirstOrDefault(x => x.Key == "LEG2")?.Value,
-                ThirdAlloy = article.Attributes.FirstOrDefault(x => x.Key == "LEG3")?.Value,
-                Collection = article.Attributes.FirstOrDefault(x => x.Key == "KOLL")?.Value,
-                ProductGroup = article.Attributes.FirstOrDefault(x => x.Key == "WRG_2")?.Value,
-                MainProductGroup = article.Attributes.FirstOrDefault(x => x.Key == "WHG_2")?.Value,
-                Target = article.Attributes.FirstOrDefault(x => x.Key == "ZIEL")?.Value
+                Brand = GetAttribute("MRK", article),
+                Material = GetAttribute("MAT", article),
+                SecondMaterial = GetAttribute("MAT2", article),
+                ThirdMaterial = GetAttribute("MAT3", article),
+                Alloy = GetAttribute("LEG", article),
+                SecondAlloy = GetAttribute("LEG2", article),
+                ThirdAlloy = GetAttribute("LEG3", article),
+                Collection = GetAttribute("KOLL", article),
+                ProductGroup = GetAttribute("WRG_2", article),
+                MainProductGroup = GetAttribute("WHG_2", article),
+                Target = GetAttribute("ZIEL", article)
             };
+        }
+
+        private static string GetAttribute(string key, Article article)
+        {
+            return article.Attributes.FirstOrDefault(x => x.Key == key && x.Language == "de")?.Value;
         }
     }
 }

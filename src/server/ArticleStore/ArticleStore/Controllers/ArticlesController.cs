@@ -1,34 +1,59 @@
 using ArticleStore.Services.Interfaces;
 using Microsoft.AspNetCore.Mvc;
-using Microsoft.Extensions.Logging;
 using System.Collections.Generic;
+using System.Linq;
 using System.Threading.Tasks;
 
 namespace ArticleStore.Controllers
 {
     [ApiController]
-    [Route("[controller]")]
+    [Route("api/[controller]")]
     public class ArticlesController : ControllerBase
     {
-        private readonly ILogger<ArticlesController> _logger;
         private readonly IArticleService _articleService;
 
-        public ArticlesController(ILogger<ArticlesController> logger, IArticleService articleService)
+        public ArticlesController(IArticleService articleService)
         {
-            _logger = logger;
             _articleService = articleService;
         }
 
-        [HttpPost]
-        public void CreateArticles()
+        [HttpGet("Count")]
+        public ActionResult<IEnumerable<int>> GetArticlesCount()
         {
-            _articleService.UpdateArticlesAsync(new[] { new AggregatedArticle() { ArticleId = "1" } });
+            return Ok(_articleService.GetArticles().Count());
         }
 
         [HttpGet]
-        public IEnumerable<AggregatedArticle> GetArticles()
+        public ActionResult<IEnumerable<AggregatedArticle>> GetArticles()
         {
-            return _articleService.GetArticles();
+            return Ok(_articleService.GetArticles());
+        }
+
+        [HttpGet("{articleId:int}")]
+        public ActionResult<AggregatedArticle> GetArticle(string articleId)
+        {
+            return Ok(_articleService.GetArticle(articleId));
+        }
+
+        [HttpPut]
+        public async Task<ActionResult> CreateArticle([FromBody] AggregatedArticle article)
+        {
+            await _articleService.CreateArticleAsync(article);
+            return Ok();
+        }
+
+        [HttpDelete("{articleId:int}")]
+        public async Task<ActionResult> DeleteArticle(string articleId)
+        {
+            await _articleService.DeleteArticleAsync(articleId);
+            return Ok();
+        }
+
+        [HttpPost]
+        public async Task<ActionResult> UpdateArticle([FromBody] AggregatedArticle article)
+        {
+            await _articleService.UpdateArticleAsync(article);
+            return Ok();
         }
     }
 }

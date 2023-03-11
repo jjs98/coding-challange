@@ -8,14 +8,14 @@ using System.Threading.Tasks;
 
 namespace ArticleStore.Services
 {
-    public class UpdateService : IDisposable
+    public class FetchDataService : IDisposable
     {
         private readonly Timer _timer;
         private readonly HttpClient _client;
         private readonly IArticleService _articleService;
 
 
-        public UpdateService(IArticleService articleService)
+        public FetchDataService(IArticleService articleService)
         {
             _articleService = articleService;
 

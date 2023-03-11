@@ -7,17 +7,30 @@ namespace ArticleStore.Services
 {
     public class ArticlesService : IArticleService
     {
-        private readonly ApplicationDbContext _dbContext;
+        private readonly IApplicationDbService _applicationDbService;
 
-        public ArticlesService(ApplicationDbContext dbContext)
+        public ArticlesService(IApplicationDbService applicationDbService)
         {
-            _dbContext = dbContext;
+            _applicationDbService = applicationDbService;
         }
 
         public IEnumerable<AggregatedArticle> GetArticles()
         {
-            _dbContext.Database.EnsureCreated();
-            return _dbContext.Articles;
+            return _applicationDbService.GetArticles();
+        }
+        public AggregatedArticle GetArticle(string articleId)
+        {
+            return _applicationDbService.GetArticle(articleId);
+        }
+
+        public async Task<bool> CreateArticleAsync(AggregatedArticle article)
+        {
+            return await _applicationDbService.CreateArticleAsync(article);
+        }
+
+        public async Task<bool> DeleteArticleAsync(string articleId)
+        {
+            return await _applicationDbService.DeleteArticleAsync(articleId);
         }
 
         public async Task UpdateArticlesAsync(IEnumerable<AggregatedArticle> articles)
@@ -27,27 +40,19 @@ namespace ArticleStore.Services
                 return;
             }
 
-            _dbContext.Database.EnsureCreated();
             foreach (var article in articles)
             {
-                var currentArticle = _dbContext.Articles.FirstOrDefault(x => x.ArticleId == article.ArticleId);
-                if (currentArticle != null)
+                var couldBeUpdated = await UpdateArticleAsync(article);
+                if (!couldBeUpdated)
                 {
-                    if (currentArticle == article)
-                    {
-                        continue;
-                    }
-                    else
-                    {
-                        currentArticle = article;
-                    }
-                }
-                else
-                {
-                    await _dbContext.AddAsync(article);
+                    await CreateArticleAsync(article);
                 }
             }
-            await _dbContext.SaveChangesAsync();
+        }
+
+        public async Task<bool> UpdateArticleAsync(AggregatedArticle article)
+        {
+            return await _applicationDbService.UpdateArticleAsync(article);
         }
     }
 }
