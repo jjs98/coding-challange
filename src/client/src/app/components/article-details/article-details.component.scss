@@ -1,0 +1,19 @@
+.header {
+  display: flex;
+  flex-direction: column;
+  width: 100%;
+  font-size: large;
+
+  mat-divider {
+    margin-top: 16px;
+  }
+}
+
+.details {
+  display: flex;
+  flex-direction: column;
+
+  span {
+    margin-top: 16px;
+  }
+}

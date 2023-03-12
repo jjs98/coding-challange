@@ -1,0 +1,30 @@
+.actionbar {
+  display: flex;
+  flex-direction: row;
+  margin-top: 16px;
+
+  .spacer {
+    flex: 1;
+  }
+
+  button {
+    margin-right: 16px;
+  }
+}
+
+.article-overview {
+  display: flex;
+  flex-direction: row;
+
+  .article-list {
+    flex: 3;
+    margin: 16px;
+    height: calc(100vh - 148px);
+    overflow-y: auto;
+  }
+
+  .article-details {
+    flex: 2;
+    margin: 16px;
+  }
+}

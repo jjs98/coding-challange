@@ -1,16 +1,49 @@
-<div>
-  <button (click)="getArticleCount()">Refresh Count</button>
-  <span>{{articleCount$ | async}}</span>
+<div class="actionbar">
+  <div class="spacer"></div>
+  <button mat-icon-button
+          (click)="getArticles()">
+    <mat-icon>refresh</mat-icon></button>
 </div>
+<div class="article-overview">
+  <div class="article-list">
+    <table mat-table
+           [dataSource]="articles$">
+      <ng-container matColumnDef="articleId">
+        <th mat-header-cell
+            *matHeaderCellDef>{{'article.articleId' | translate}}</th>
+        <td mat-cell
+            *matCellDef="let element">{{element.articleId}}</td>
+      </ng-container>
 
-<div>
-  <button (click)="getArticles()">Refresh Articles</button>
-  <div *ngIf="articles$ | async as articles">
-    <div *ngFor="let article of articles">
-      <span>{{article.articleId}}</span>
-      <span>{{article.brand}}</span>
-      <span>{{article.mainProductGroup}}</span>
-      <span>{{article.target}}</span>
-    </div>
+      <ng-container matColumnDef="brand">
+        <th mat-header-cell
+            *matHeaderCellDef>{{'article.brand' | translate}}</th>
+        <td mat-cell
+            *matCellDef="let element">{{element.brand}}</td>
+      </ng-container>
+
+      <ng-container matColumnDef="mainProductGroup">
+        <th mat-header-cell
+            *matHeaderCellDef>{{'article.mainProductGroup' | translate}}</th>
+        <td mat-cell
+            *matCellDef="let element">{{element.mainProductGroup}}</td>
+      </ng-container>
+
+      <ng-container matColumnDef="target">
+        <th mat-header-cell
+            *matHeaderCellDef>{{'article.target' | translate}}</th>
+        <td mat-cell
+            *matCellDef="let element">{{element.target}}</td>
+      </ng-container>
+
+      <tr mat-header-row
+          *matHeaderRowDef="displayedColumns; sticky: true"></tr>
+      <tr mat-row
+          (click)="onRowClicked(row)"
+          *matRowDef="let row; columns: displayedColumns;"></tr>
+    </table>
+  </div>
+  <div class="article-details">
+    <app-article-details [article$]="selectedArticle$"></app-article-details>
   </div>
 </div>

@@ -24,22 +24,26 @@ namespace ArticleStore.Services
             {
                 ArticleId = article.ArticleId,
                 Brand = GetAttribute("MRK", article),
-                Material = GetAttribute("MAT", article),
-                SecondMaterial = GetAttribute("MAT2", article),
-                ThirdMaterial = GetAttribute("MAT3", article),
-                Alloy = GetAttribute("LEG", article),
-                SecondAlloy = GetAttribute("LEG2", article),
-                ThirdAlloy = GetAttribute("LEG3", article),
+                Material = GetAttribute("MAT", "de", article),
+                SecondMaterial = GetAttribute("MAT2", "de", article),
+                ThirdMaterial = GetAttribute("MAT3", "de", article),
+                Alloy = GetAttribute("LEG", "de", article),
+                SecondAlloy = GetAttribute("LEG2", "de", article),
+                ThirdAlloy = GetAttribute("LEG3", "de", article),
                 Collection = GetAttribute("KOLL", article),
                 ProductGroup = GetAttribute("WRG_2", article),
                 MainProductGroup = GetAttribute("WHG_2", article),
-                Target = GetAttribute("ZIEL", article)
+                Target = GetAttribute("ZIEL", "de", article)
             };
         }
 
-        private static string GetAttribute(string key, Article article)
+        private static string GetAttribute(string key, Article article) => GetAttribute(key, null, article);
+        private static string GetAttribute(string key, string language, Article article)
         {
-            return article.Attributes.FirstOrDefault(x => x.Key == key && x.Language == "de")?.Value;
+            if(language is null)
+                return article.Attributes.FirstOrDefault(x => x.Key == key)?.Value;
+
+            return article.Attributes.FirstOrDefault(x => x.Key == key && x.Language == language)?.Value;
         }
     }
 }

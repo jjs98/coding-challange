@@ -1,0 +1,18 @@
+{
+  "de": "Deutsch",
+  "en": "English",
+  "app.list": "Article list",
+  "app.language": "Language",
+  "article.articleId": "Article number",
+  "article.brand": "Brand",
+  "article.target": "Target",
+  "article.material": "Material",
+  "article.secondMaterial": "Second material",
+  "article.thirdMaterial": "Third material",
+  "article.alloy": "Alloy",
+  "article.secondAlloy": "Second alloy",
+  "article.thirdAlloy": "Third alloy",
+  "article.mainProductGroup": "Main product group",
+  "article.productGroup": "Product group",
+  "article.collection": "Collection"
+}

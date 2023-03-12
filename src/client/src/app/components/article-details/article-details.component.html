@@ -1,0 +1,23 @@
+<mat-card *ngIf="article$ | async as article">
+  <mat-card-header>
+    <div class="header">
+      <span>{{'article.articleId' | translate}}: {{article.articleId}}</span>
+      <mat-divider></mat-divider>
+    </div>
+  </mat-card-header>
+  <mat-card-content>
+    <div class="details">
+      <span>{{'article.brand' | translate}}: {{article.brand}}</span>
+      <span>{{'article.target' | translate}}: {{article.target}}</span>
+      <span>{{'article.material' | translate}}: {{article.material}}</span>
+      <span>{{'article.secondMaterial' | translate}}: {{article.secondMaterial}}</span>
+      <span>{{'article.thirdMaterial' | translate}}: {{article.thirdMaterial}}</span>
+      <span>{{'article.alloy' | translate}}: {{article.alloy}}</span>
+      <span>{{'article.secondAlloy' | translate}}: {{article.secondAlloy}}</span>
+      <span>{{'article.thirdAlloy' | translate}}: {{article.thirdAlloy}}</span>
+      <span>{{'article.mainProductGroup' | translate}}: {{article.mainProductGroup}}</span>
+      <span>{{'article.productGroup' | translate}}: {{article.productGroup}}</span>
+      <span>{{'article.collection' | translate}}: {{article.collection}}</span>
+    </div>
+  </mat-card-content>
+</mat-card>

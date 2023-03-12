@@ -1,0 +1,18 @@
+{
+  "de": "Deutsch",
+  "en": "English",
+  "app.list": "Artikel Liste",
+  "app.language": "Sprache",
+  "article.articleId": "Artikelnummer",
+  "article.brand": "Marke",
+  "article.target": "Ziel",
+  "article.material": "Material",
+  "article.secondMaterial": "Zweites Material",
+  "article.thirdMaterial": "Drittes Material",
+  "article.alloy": "Legierung",
+  "article.secondAlloy": "Zweite Legierung",
+  "article.thirdAlloy": "Dritte Legierung",
+  "article.mainProductGroup": "Warenhauptgruppe",
+  "article.productGroup": "Warengruppe",
+  "article.collection": "Kollektion"
+}

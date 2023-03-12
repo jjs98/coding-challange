@@ -1,17 +1,30 @@
-import { Component } from '@angular/core';
+import { AggregatedArticle } from './../../../../.api/nswag';
+import { Component, ViewChild } from '@angular/core';
+import { MatSort, Sort } from '@angular/material/sort';
 import { BehaviorSubject, Observable } from 'rxjs';
-import { AggregatedArticle } from '../../../../.api/nswag';
 import { ArticleService } from '../../services/article.service';
+import { MatTableDataSource } from '@angular/material/table';
 
 @Component({
   selector: 'app-article-list',
   templateUrl: './article-list.component.html',
-  styleUrls: ['./article-list.component.scss']
+  styleUrls: ['./article-list.component.scss'],
 })
 export class ArticleListComponent {
-  public _articleCount$: BehaviorSubject<number> = new BehaviorSubject(0);
-  public _articles$: BehaviorSubject<AggregatedArticle[]> = new BehaviorSubject([new AggregatedArticle()]);
+  public displayedColumns: string[] = [
+    'articleId',
+    'brand',
+    'mainProductGroup',
+    'target',
+  ];
 
+  public _articleCount$: BehaviorSubject<number> = new BehaviorSubject(0);
+  public _articles$: BehaviorSubject<AggregatedArticle[]> = new BehaviorSubject(
+    [new AggregatedArticle()]
+  );
+  public _selectedArticle$: BehaviorSubject<AggregatedArticle> =
+    new BehaviorSubject(new AggregatedArticle());
+    
   public get articleCount$(): Observable<number> {
     return this._articleCount$.asObservable();
   }
@@ -20,19 +33,29 @@ export class ArticleListComponent {
     return this._articles$.asObservable();
   }
 
-  constructor(private _articleService: ArticleService) {}
+  public get selectedArticle$(): Observable<AggregatedArticle> {
+    return this._selectedArticle$.asObservable();
+  }
+
+  constructor(private _articleService: ArticleService) {
+    this.getArticles();
+  }
+
+  @ViewChild(MatSort) sort: MatSort | undefined;
 
   public getArticleCount(): void {
     this._articleService.getArticleCount().subscribe((count) => {
-      console.log(count);
       this._articleCount$.next(count);
     });
   }
 
   public getArticles(): void {
     this._articleService.getArticles().subscribe((articles) => {
-      console.log(articles);
       this._articles$.next(articles);
     });
+  }
+
+  public onRowClicked(article: AggregatedArticle): void {
+    this._selectedArticle$.next(article);
   }
 }
