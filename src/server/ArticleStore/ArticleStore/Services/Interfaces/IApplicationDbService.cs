@@ -10,5 +10,6 @@ namespace ArticleStore.Services.Interfaces
         public IEnumerable<AggregatedArticle> GetArticles();
         public AggregatedArticle GetArticle(string articleId);
         public Task<bool> TryUpdateArticleAsync(AggregatedArticle article);
+        public Task UpdateOrCreateArticleAsync(AggregatedArticle article);
     }
 }

@@ -36,5 +36,10 @@ namespace ArticleStore.Services
         {
             return await _applicationDbService.TryUpdateArticleAsync(article);
         }
+
+        public async Task UpdateOrCreateArticleAsync(AggregatedArticle article)
+        {
+            await _applicationDbService.UpdateOrCreateArticleAsync(article);
+        }
     }
 }

@@ -25,26 +25,35 @@ namespace ArticleStore.Services
             {
                 ArticleId = article.ArticleId,
                 Brand = GetAttribute("MRK", article),
-                Material = GetAttribute("MAT", "de", article),
-                SecondMaterial = GetAttribute("MAT2", "de", article),
-                ThirdMaterial = GetAttribute("MAT3", "de", article),
-                Alloy = GetAttribute("LEG", "de", article),
-                SecondAlloy = GetAttribute("LEG2", "de", article),
-                ThirdAlloy = GetAttribute("LEG3", "de", article),
+                Material = AggregateAttribute("MAT", article.Attributes),
+                SecondMaterial = AggregateAttribute("MAT2", article.Attributes),
+                ThirdMaterial = AggregateAttribute("MAT3", article.Attributes),
+                Alloy = AggregateAttribute("LEG", article.Attributes),
+                SecondAlloy = AggregateAttribute("LEG2", article.Attributes),
+                ThirdAlloy = AggregateAttribute("LEG3", article.Attributes),
                 Collection = GetAttribute("KOLL", article),
                 ProductGroup = GetAttribute("WRG_2", article),
                 MainProductGroup = GetAttribute("WHG_2", article),
-                Target = GetAttribute("ZIEL", "de", article)
+                Target= AggregateAttribute("ZIEL", article.Attributes)
             };
         }
 
-        private static string GetAttribute(string key, Article article) => GetAttribute(key, null, article);
-        private static string GetAttribute(string key, string language, Article article)
+        private static string GetAttribute(string key, Article article)
         {
-            if(language is null)
-                return article.Attributes.FirstOrDefault(x => x.Key == key)?.Value;
+            return article.Attributes.FirstOrDefault(x => x.Key == key)?.Value;
+        }
 
-            return article.Attributes.FirstOrDefault(x => x.Key == key && x.Language == language)?.Value;
+        private static IEnumerable<AggregatedAttribute> AggregateAttribute(string key, IEnumerable<Attribute> attributes)
+        {
+            var attributesForKey = attributes.Where(x => x.Key == key);
+            foreach (var attribute in attributesForKey)
+            {
+                yield return new AggregatedAttribute()
+                {
+                    Language =  attribute.Language,
+                    Value = attribute.Value,
+                };
+            }
         }
     }
 }
