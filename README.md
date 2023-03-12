@@ -1,4 +1,4 @@
-# coding-challange
+# Coding-challange articlestore
 
 ## Build and run Docker
 
@@ -16,16 +16,9 @@ Build for linux Amd64
 ### Client
 - [pnpm](https://pnpm.io/) as a package manager
 - [NSwag](https://github.com/RicoSuter/NSwag) to generate client apis
-- [Angular Material](angular-material) for control library and themeing
+- [Angular Material](https://material.angular.io/) for control library and themeing
 
 ### Backend
-- [.Net 6](dotnet)
-- [EntityFramework](nuget-ef) for SQL Server
-- [docker SqlServer][docker-sqlserver]
-
-[github-nswag]: https://github.com/RicoSuter/NSwag
-[pnpm]: https://pnpm.io/
-[angular-material]: https://material.angular.io/
-[dotnet]: https://learn.microsoft.com/de-de/dotnet/core/whats-new/dotnet-6
-[nuget-ef]: https://www.nuget.org/packages/Microsoft.EntityFrameworkCore.SqlServer/
-[docker-sqlserver]: https://hub.docker.com/_/microsoft-mssql-server
+- [.Net 6](https://learn.microsoft.com/de-de/dotnet/core/whats-new/dotnet-6)
+- [EntityFramework](https://www.nuget.org/packages/Microsoft.EntityFrameworkCore.SqlServer/) for SQL Server
+- [docker SqlServer](https://hub.docker.com/_/microsoft-mssql-server)
