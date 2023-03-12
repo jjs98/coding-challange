@@ -4,7 +4,7 @@ using Microsoft.AspNetCore.Builder;
 using Microsoft.EntityFrameworkCore;
 using Microsoft.Extensions.Configuration;
 using Microsoft.Extensions.DependencyInjection;
-using Microsoft.Extensions.Hosting;
+using Microsoft.Extensions.Logging;
 
 namespace ArticleStore
 {
@@ -13,11 +13,7 @@ namespace ArticleStore
         public static void Main(string[] args)
         {
             var builder = WebApplication.CreateBuilder(args);
-
-            // Add services to the container.
-
             builder.Services.AddControllers();
-            // Learn more about configuring Swagger/OpenAPI at https://aka.ms/aspnetcore/swashbuckle
             builder.Services.AddEndpointsApiExplorer();
             builder.Services.AddSwaggerGen();
             builder.Services.AddSwaggerDocument(settings =>
@@ -28,32 +24,30 @@ namespace ArticleStore
                     document.Info.Title = "ArticleStore";
                 };
             });
-
+            builder.Services.AddCors(options =>
+            {
+                options.AddPolicy("CorsPolicy",
+                policy => policy
+                .WithOrigins("http://localhost:5000"));
+            });
 
             builder.Services.AddDbContext<ApplicationDbContext>(
                 options => options.UseSqlServer(builder.Configuration.GetConnectionString("Default")), ServiceLifetime.Singleton);
             builder.Services.AddDatabaseDeveloperPageExceptionFilter();
-
             builder.Services.AddSingleton<IApplicationDbService, ApplicationDbService>();
             builder.Services.AddSingleton<IArticleService, ArticlesService>();
 
             var app = builder.Build();
-
             var articleService = app.Services.GetService<IArticleService>();
-            //_ = new FetchDataService(articleService);
+            var loggingService = app.Services.GetService<ILogger<FetchDataService>>();
+            _ = new FetchDataService(articleService, loggingService);
 
-            // Configure the HTTP request pipeline.
-            if (app.Environment.IsDevelopment())
-            {
-            }
             app.UseOpenApi();
             app.UseSwaggerUi3();
 
             app.UseHttpsRedirection();
-
+            app.UseCors("CorsPolicy");
             app.UseAuthorization();
-
-
             app.MapControllers();
 
             app.Run();

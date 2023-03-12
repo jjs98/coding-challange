@@ -15,10 +15,10 @@ namespace ArticleStore.Services
         {
             _dbContext = dbContext;
             _logger = logger;
-            //_dbContext.Database.EnsureCreated();
+            _dbContext.Database.EnsureCreated();
         }
 
-        public async Task<bool> CreateArticleAsync(AggregatedArticle article)
+        public async Task<bool> TryCreateArticleAsync(AggregatedArticle article)
         {
             var currentArticle = GetArticle(article.ArticleId);
             if (currentArticle is not null)
@@ -31,7 +31,7 @@ namespace ArticleStore.Services
             return true;
         }
 
-        public async Task<bool> DeleteArticleAsync(string articleId)
+        public async Task<bool> TryDeleteArticleAsync(string articleId)
         {
             var currentArticle = GetArticle(articleId);
             if (currentArticle is null)
@@ -54,7 +54,7 @@ namespace ArticleStore.Services
             return _dbContext.Articles.FirstOrDefault(x => x.ArticleId == articleId);
         }
 
-        public async Task<bool> UpdateArticleAsync(AggregatedArticle article)
+        public async Task<bool> TryUpdateArticleAsync(AggregatedArticle article)
         {
             var currentArticle = GetArticle(article.ArticleId);
             if (currentArticle is null)

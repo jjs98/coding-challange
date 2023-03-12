@@ -18,7 +18,7 @@ namespace ArticleStore.Controllers
         }
 
         [HttpGet("Count")]
-        public ActionResult<IEnumerable<int>> GetArticlesCount()
+        public ActionResult<int> GetArticlesCount()
         {
             return Ok(_articleService.GetArticles().Count());
         }
@@ -38,21 +38,21 @@ namespace ArticleStore.Controllers
         [HttpPut]
         public async Task<ActionResult> CreateArticle([FromBody] AggregatedArticle article)
         {
-            await _articleService.CreateArticleAsync(article);
+            await _articleService.TryCreateArticleAsync(article);
             return Ok();
         }
 
         [HttpDelete("{articleId:int}")]
         public async Task<ActionResult> DeleteArticle(string articleId)
         {
-            await _articleService.DeleteArticleAsync(articleId);
+            await _articleService.TryDeleteArticleAsync(articleId);
             return Ok();
         }
 
         [HttpPost]
         public async Task<ActionResult> UpdateArticle([FromBody] AggregatedArticle article)
         {
-            await _articleService.UpdateArticleAsync(article);
+            await _articleService.TryUpdateArticleAsync(article);
             return Ok();
         }
     }

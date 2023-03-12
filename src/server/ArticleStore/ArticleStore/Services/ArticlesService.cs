@@ -23,36 +23,19 @@ namespace ArticleStore.Services
             return _applicationDbService.GetArticle(articleId);
         }
 
-        public async Task<bool> CreateArticleAsync(AggregatedArticle article)
+        public async Task<bool> TryCreateArticleAsync(AggregatedArticle article)
         {
-            return await _applicationDbService.CreateArticleAsync(article);
+            return await _applicationDbService.TryCreateArticleAsync(article);
         }
 
-        public async Task<bool> DeleteArticleAsync(string articleId)
+        public async Task<bool> TryDeleteArticleAsync(string articleId)
         {
-            return await _applicationDbService.DeleteArticleAsync(articleId);
+            return await _applicationDbService.TryDeleteArticleAsync(articleId);
         }
 
-        public async Task UpdateArticlesAsync(IEnumerable<AggregatedArticle> articles)
+        public async Task<bool> TryUpdateArticleAsync(AggregatedArticle article)
         {
-            if (!articles.Any())
-            {
-                return;
-            }
-
-            foreach (var article in articles)
-            {
-                var couldBeUpdated = await UpdateArticleAsync(article);
-                if (!couldBeUpdated)
-                {
-                    await CreateArticleAsync(article);
-                }
-            }
-        }
-
-        public async Task<bool> UpdateArticleAsync(AggregatedArticle article)
-        {
-            return await _applicationDbService.UpdateArticleAsync(article);
+            return await _applicationDbService.TryUpdateArticleAsync(article);
         }
     }
 }
