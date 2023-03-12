@@ -1,5 +1,7 @@
 using Newtonsoft.Json;
+using System;
 using System.ComponentModel.DataAnnotations;
+using System.Text.Json;
 
 namespace ArticleStore
 {
@@ -21,7 +23,7 @@ namespace ArticleStore
         public string Language { get; set; }
     }
 
-    public class AggregatedArticle
+    public class AggregatedArticle : IDisposable
     {
         [Key]
         public string ArticleId { get; set; }
@@ -36,5 +38,10 @@ namespace ArticleStore
         public string ProductGroup { get; set; }
         public string MainProductGroup { get; set; }
         public string Target { get; set; }
+
+
+        public JsonDocument Data { get; set; }
+
+        public void Dispose() => Data?.Dispose();
     }
 }

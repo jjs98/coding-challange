@@ -1,6 +1,5 @@
 ﻿using ArticleStore.Services.Interfaces;
 using System.Collections.Generic;
-using System.Linq;
 using System.Threading.Tasks;
 
 namespace ArticleStore.Services

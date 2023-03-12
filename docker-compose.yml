@@ -14,16 +14,24 @@ services:
           context: ./src/server/ArticleStore
           dockerfile: Dockerfile
         image: jjs98/articlestore-api
+        environment:
+          ConnectionStrings__Default: Server=db;Port=5432;Database=ArticleStore;User Id=postgres;Password=S3cur3P@ssW0rd!;
         ports:
-          - "8080:80"
+          - "8081:80"
         depends_on:
           - db
 
     db:
-        image: "mcr.microsoft.com/mssql/server:2022-latest"
-        ports:
-          - "1433:1433"
-
+        image: postgres
+        restart: always
         environment:
-            SA_PASSWORD: "S3cur3P@ssW0rd!"
-            ACCEPT_EULA: "Y"
+          POSTGRES_USER: postgres
+          POSTGRES_PASSWORD: S3cur3P@ssW0rd!
+        ports:
+          - '5432:5432'
+
+    adminer:
+        image: adminer
+        restart: always
+        ports:
+          - 8080:8080

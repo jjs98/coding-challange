@@ -32,7 +32,7 @@ namespace ArticleStore
             });
 
             builder.Services.AddDbContext<ApplicationDbContext>(
-                options => options.UseSqlServer(builder.Configuration.GetConnectionString("Default")), ServiceLifetime.Singleton);
+                options => options.UseNpgsql(builder.Configuration.GetConnectionString("Default")), ServiceLifetime.Singleton);
             builder.Services.AddDatabaseDeveloperPageExceptionFilter();
             builder.Services.AddSingleton<IApplicationDbService, ApplicationDbService>();
             builder.Services.AddSingleton<IArticleService, ArticlesService>();
