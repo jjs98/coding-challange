@@ -1,1 +1,16 @@
-<p>article-list works!</p>
+<div>
+  <button (click)="getArticleCount()">Refresh Count</button>
+  <span>{{articleCount$ | async}}</span>
+</div>
+
+<div>
+  <button (click)="getArticles()">Refresh Articles</button>
+  <div *ngIf="articles$ | async as articles">
+    <div *ngFor="let article of articles">
+      <span>{{article.articleId}}</span>
+      <span>{{article.brand}}</span>
+      <span>{{article.mainProductGroup}}</span>
+      <span>{{article.target}}</span>
+    </div>
+  </div>
+</div>
