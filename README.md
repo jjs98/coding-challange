@@ -8,7 +8,7 @@ Execute `docker-compose build` and `docker-compose up` to run the container loca
 - The web-app is hosted on port 8081
   - The swagger-api can be accessed via http://localhost:8081/swagger/index.html
 - The PostgreSQL is hosted on port 5432
-- The Adminer is hosted on port 8080
+- The Adminer is hosted on port http://localhost:8080
 
 Build for linux Amd64
 
