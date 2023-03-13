@@ -69,11 +69,7 @@ namespace ArticleStore.Services
 
             foreach (var article in articles)
             {
-                var articleWasUpdated = await _articleService.TryUpdateArticleAsync(article);
-                if (articleWasUpdated)
-                    continue;
-
-                await _articleService.TryCreateArticleAsync(article);
+                await _articleService.UpdateOrCreateArticleAsync(article);
             }
         }
     }

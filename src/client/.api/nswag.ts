@@ -352,16 +352,16 @@ export class ArticlesClient {
 export class AggregatedArticle implements IAggregatedArticle {
     articleId?: string | undefined;
     brand?: string | undefined;
-    material?: string | undefined;
-    secondMaterial?: string | undefined;
-    thirdMaterial?: string | undefined;
-    alloy?: string | undefined;
-    secondAlloy?: string | undefined;
-    thirdAlloy?: string | undefined;
+    material?: AggregatedAttribute[] | undefined;
+    secondMaterial?: AggregatedAttribute[] | undefined;
+    thirdMaterial?: AggregatedAttribute[] | undefined;
+    alloy?: AggregatedAttribute[] | undefined;
+    secondAlloy?: AggregatedAttribute[] | undefined;
+    thirdAlloy?: AggregatedAttribute[] | undefined;
     collection?: string | undefined;
     productGroup?: string | undefined;
     mainProductGroup?: string | undefined;
-    target?: string | undefined;
+    target?: AggregatedAttribute[] | undefined;
 
     constructor(data?: IAggregatedArticle) {
         if (data) {
@@ -414,19 +414,59 @@ export class AggregatedArticle implements IAggregatedArticle {
     }
 }
 
+export class AggregatedAttribute implements AggregatedAttribute {
+    language?: string | undefined;
+    value?: string | undefined;
+
+    constructor(data?: AggregatedAttribute) {
+        if (data) {
+            for (var property in data) {
+                if (data.hasOwnProperty(property))
+                    (<any>this)[property] = (<any>data)[property];
+            }
+        }
+    }
+
+    init(_data?: any) {
+        if (_data) {
+            this.language = _data["language"];
+            this.value = _data["value"];
+        }
+    }
+
+    static fromJS(data: any): AggregatedArticle {
+        data = typeof data === 'object' ? data : {};
+        let result = new AggregatedArticle();
+        result.init(data);
+        return result;
+    }
+
+    toJSON(data?: any) {
+        data = typeof data === 'object' ? data : {};
+        data["language"] = this.language;
+        data["value"] = this.value;
+        return data;
+    }
+}
+
 export interface IAggregatedArticle {
     articleId?: string | undefined;
     brand?: string | undefined;
-    material?: string | undefined;
-    secondMaterial?: string | undefined;
-    thirdMaterial?: string | undefined;
-    alloy?: string | undefined;
-    secondAlloy?: string | undefined;
-    thirdAlloy?: string | undefined;
+    material?: AggregatedAttribute[] | undefined;
+    secondMaterial?: AggregatedAttribute[] | undefined;
+    thirdMaterial?: AggregatedAttribute[] | undefined;
+    alloy?: AggregatedAttribute[] | undefined;
+    secondAlloy?: AggregatedAttribute[] | undefined;
+    thirdAlloy?: AggregatedAttribute[] | undefined;
     collection?: string | undefined;
     productGroup?: string | undefined;
     mainProductGroup?: string | undefined;
-    target?: string | undefined;
+    target?: AggregatedAttribute[] | undefined;
+}
+
+export interface IAggregatedAttribute {
+    language?: string | undefined;
+    value?: string | undefined;
 }
 
 export interface FileResponse {

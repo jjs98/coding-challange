@@ -1,6 +1,5 @@
 ﻿using ArticleStore.Services.Interfaces;
 using System.Collections.Generic;
-using System.Linq;
 using System.Threading.Tasks;
 
 namespace ArticleStore.Services
@@ -36,6 +35,11 @@ namespace ArticleStore.Services
         public async Task<bool> TryUpdateArticleAsync(AggregatedArticle article)
         {
             return await _applicationDbService.TryUpdateArticleAsync(article);
+        }
+
+        public async Task UpdateOrCreateArticleAsync(AggregatedArticle article)
+        {
+            await _applicationDbService.UpdateOrCreateArticleAsync(article);
         }
     }
 }

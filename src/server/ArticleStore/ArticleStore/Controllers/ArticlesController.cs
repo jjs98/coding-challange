@@ -29,7 +29,7 @@ namespace ArticleStore.Controllers
             return Ok(_articleService.GetArticles());
         }
 
-        [HttpGet("{articleId:int}")]
+        [HttpGet("{articleId}")]
         public ActionResult<AggregatedArticle> GetArticle(string articleId)
         {
             return Ok(_articleService.GetArticle(articleId));
@@ -42,7 +42,7 @@ namespace ArticleStore.Controllers
             return Ok();
         }
 
-        [HttpDelete("{articleId:int}")]
+        [HttpDelete("{articleId}")]
         public async Task<ActionResult> DeleteArticle(string articleId)
         {
             await _articleService.TryDeleteArticleAsync(articleId);

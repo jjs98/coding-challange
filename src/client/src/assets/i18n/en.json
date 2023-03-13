@@ -3,6 +3,7 @@
   "en": "English",
   "app.list": "Article list",
   "app.language": "Language",
+  "article.select-language": "Choose article language",
   "article.articleId": "Article number",
   "article.brand": "Brand",
   "article.target": "Target",

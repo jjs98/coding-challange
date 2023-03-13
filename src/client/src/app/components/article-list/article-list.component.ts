@@ -15,7 +15,7 @@ export class ArticleListComponent {
     'articleId',
     'brand',
     'mainProductGroup',
-    'target',
+    'productGroup',
   ];
 
   public _articleCount$: BehaviorSubject<number> = new BehaviorSubject(0);
