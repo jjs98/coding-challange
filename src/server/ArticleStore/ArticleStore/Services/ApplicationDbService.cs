@@ -16,7 +16,6 @@ namespace ArticleStore.Services
         {
             _dbContext = dbContext;
             _logger = logger;
-            _dbContext.Database.EnsureDeleted();
             _dbContext.Database.EnsureCreated();
         }
         public void Dispose()
@@ -79,7 +78,10 @@ namespace ArticleStore.Services
             {
                 await UpdateArticle(currentArticle, article);
             }
-            await CreateArticle(article);
+            else
+            {
+                await CreateArticle(article);
+            }
         }
 
         private async Task UpdateArticle(AggregatedArticle currentArticle, AggregatedArticle article)

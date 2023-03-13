@@ -1,14 +1,16 @@
+$margin: 16px;
+
 .actionbar {
   display: flex;
   flex-direction: row;
-  margin-top: 16px;
+  margin-top: $margin;
 
   .spacer {
     flex: 1;
   }
 
   button {
-    margin-right: 16px;
+    margin-right: $margin;
   }
 }
 
@@ -18,13 +20,13 @@
 
   .article-list {
     flex: 3;
-    margin: 16px;
+    margin: $margin;
     height: calc(100vh - 148px);
     overflow-y: auto;
   }
 
   .article-details {
     flex: 2;
-    margin: 16px;
+    margin: $margin;
   }
 }

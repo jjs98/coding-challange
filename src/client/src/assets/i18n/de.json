@@ -3,6 +3,8 @@
   "en": "English",
   "app.list": "Artikel Liste",
   "app.language": "Sprache",
+  "article.empty": "Wähle einen Artikel, um Details zu sehen",
+  "article.refresh": "Artikel aktualisieren",
   "article.select-language": "Artikel-Sprache auswählen",
   "article.articleId": "Artikelnummer",
   "article.brand": "Marke",

@@ -38,7 +38,7 @@ export class ArticleListComponent {
   }
 
   constructor(private _articleService: ArticleService) {
-    this.getArticles();
+    this.refreshArticles();
   }
 
   @ViewChild(MatSort) sort: MatSort | undefined;
@@ -49,9 +49,10 @@ export class ArticleListComponent {
     });
   }
 
-  public getArticles(): void {
+  public refreshArticles(): void {
     this._articleService.getArticles().subscribe((articles) => {
       this._articles$.next(articles);
+      this._selectedArticle$.next(new AggregatedArticle())
     });
   }
 

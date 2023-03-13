@@ -38,8 +38,8 @@ namespace ArticleStore.Controllers
         [HttpPut]
         public async Task<ActionResult> CreateArticle([FromBody] AggregatedArticle article)
         {
-            await _articleService.TryCreateArticleAsync(article);
-            return Ok();
+            var couldBeCreated = await _articleService.TryCreateArticleAsync(article);
+            return couldBeCreated ? Ok() : Problem(detail: "Creating the article failed.", statusCode: 500);
         }
 
         [HttpDelete("{articleId}")]
@@ -52,8 +52,8 @@ namespace ArticleStore.Controllers
         [HttpPost]
         public async Task<ActionResult> UpdateArticle([FromBody] AggregatedArticle article)
         {
-            await _articleService.TryUpdateArticleAsync(article);
-            return Ok();
+            var couldBeCreated = await _articleService.TryUpdateArticleAsync(article);
+            return couldBeCreated ? Ok() : Problem(detail: "Updating the article failed.", statusCode: 500);
         }
     }
 }

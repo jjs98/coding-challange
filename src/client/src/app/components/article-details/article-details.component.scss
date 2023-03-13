@@ -1,23 +1,30 @@
-.header {
-  display: flex;
-  flex-direction: column;
-  width: 100%;
-  font-size: large;
+$margin: 16px;
 
-  mat-divider {
-    margin-top: 16px;
+mat-card {
+  height: 100%;
+
+  .header {
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+    font-size: large;
+
+    mat-divider {
+      margin-top: $margin;
+    }
   }
-}
 
-mat-form-field {
-  width: 30%;
-}
+  mat-form-field {
+    width: 30%;
+    margin-top: $margin;
+  }
 
-.details {
-  display: flex;
-  flex-direction: column;
+  .details {
+    display: flex;
+    flex-direction: column;
 
-  span {
-    margin-top: 16px;
+    span {
+      margin-top: $margin;
+    }
   }
 }

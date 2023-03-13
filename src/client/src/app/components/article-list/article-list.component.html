@@ -1,7 +1,8 @@
 <div class="actionbar">
   <div class="spacer"></div>
   <button mat-icon-button
-          (click)="getArticles()">
+          (click)="refreshArticles()"
+          matTooltip="{{'article.refresh' | translate}}">
     <mat-icon>refresh</mat-icon></button>
 </div>
 <div class="article-overview">
