@@ -8,33 +8,54 @@
 <div class="article-overview">
   <div class="article-list">
     <table mat-table
-           [dataSource]="articles$">
+           [dataSource]="dataSource"
+           matSort>
       <ng-container matColumnDef="articleId">
         <th mat-header-cell
-            *matHeaderCellDef>{{'article.articleId' | translate}}</th>
+            *matHeaderCellDef
+            mat-sort-header>
+          {{'article.articleId' | translate}}
+        </th>
         <td mat-cell
-            *matCellDef="let element">{{element.articleId}}</td>
+            *matCellDef="let element">
+          {{element.articleId}}
+        </td>
       </ng-container>
 
       <ng-container matColumnDef="brand">
         <th mat-header-cell
-            *matHeaderCellDef>{{'article.brand' | translate}}</th>
+            *matHeaderCellDef
+            mat-sort-header>
+          {{'article.brand' | translate}}
+        </th>
         <td mat-cell
-            *matCellDef="let element">{{element.brand}}</td>
+            *matCellDef="let element">
+          {{element.brand}}
+        </td>
       </ng-container>
 
       <ng-container matColumnDef="mainProductGroup">
         <th mat-header-cell
-            *matHeaderCellDef>{{'article.mainProductGroup' | translate}}</th>
+            *matHeaderCellDef
+            mat-sort-header>
+          {{'article.mainProductGroup' | translate}}
+        </th>
         <td mat-cell
-            *matCellDef="let element">{{element.mainProductGroup}}</td>
+            *matCellDef="let element">
+          {{element.mainProductGroup}}
+        </td>
       </ng-container>
 
       <ng-container matColumnDef="productGroup">
         <th mat-header-cell
-            *matHeaderCellDef>{{'article.productGroup' | translate}}</th>
+            *matHeaderCellDef
+            mat-sort-header>
+          {{'article.productGroup' | translate}}
+        </th>
         <td mat-cell
-            *matCellDef="let element">{{element.productGroup}}</td>
+            *matCellDef="let element">
+          {{element.productGroup}}
+        </td>
       </ng-container>
 
       <tr mat-header-row

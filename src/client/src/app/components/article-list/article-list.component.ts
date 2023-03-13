@@ -1,6 +1,6 @@
 import { AggregatedArticle } from './../../../../.api/nswag';
 import { Component, ViewChild } from '@angular/core';
-import { MatSort, Sort } from '@angular/material/sort';
+import { MatSort } from '@angular/material/sort';
 import { BehaviorSubject, Observable } from 'rxjs';
 import { ArticleService } from '../../services/article.service';
 import { MatTableDataSource } from '@angular/material/table';
@@ -17,20 +17,15 @@ export class ArticleListComponent {
     'mainProductGroup',
     'productGroup',
   ];
+  public dataSource = new MatTableDataSource([new AggregatedArticle()]);
 
   public _articleCount$: BehaviorSubject<number> = new BehaviorSubject(0);
-  public _articles$: BehaviorSubject<AggregatedArticle[]> = new BehaviorSubject(
-    [new AggregatedArticle()]
-  );
+
   public _selectedArticle$: BehaviorSubject<AggregatedArticle> =
     new BehaviorSubject(new AggregatedArticle());
-    
+
   public get articleCount$(): Observable<number> {
     return this._articleCount$.asObservable();
-  }
-
-  public get articles$(): Observable<AggregatedArticle[]> {
-    return this._articles$.asObservable();
   }
 
   public get selectedArticle$(): Observable<AggregatedArticle> {
@@ -51,8 +46,11 @@ export class ArticleListComponent {
 
   public refreshArticles(): void {
     this._articleService.getArticles().subscribe((articles) => {
-      this._articles$.next(articles);
-      this._selectedArticle$.next(new AggregatedArticle())
+      this.dataSource = new MatTableDataSource(articles);
+      if (this.sort) {
+        this.dataSource.sort = this.sort;
+      }
+      this._selectedArticle$.next(new AggregatedArticle());
     });
   }
 
