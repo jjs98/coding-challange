@@ -1,13 +1,19 @@
 <div [class]="'app ' + getTheme()">
   <mat-sidenav-container [hasBackdrop]="isMobileView()">
-    <mat-sidenav id="sidenav" #sidenav="matSidenav" [mode]="isMobileView() ? 'over' : 'side'" [opened]="isSideNavOpen"
+    <mat-sidenav id="sidenav"
+                 #sidenav="matSidenav"
+                 [mode]="isMobileView() ? 'over' : 'side'"
+                 [opened]="isSideNavOpen"
                  (openedChange)="onSideNavOpenChange($event)">
       <div class="sidenav-content">
         <div>
           <mat-icon>storefront</mat-icon>
           <mat-divider></mat-divider>
         </div>
-        <button mat-button class="menu-button" routerLink="/home" (click)="onNavItemClicked()">
+        <button mat-button
+                class="menu-button"
+                routerLink="/home"
+                (click)="onNavItemClicked()">
           <mat-icon>list</mat-icon>
           <span>{{'app.list' | translate}}</span>
         </button>
@@ -15,14 +21,18 @@
     </mat-sidenav>
     <mat-sidenav-content>
       <mat-toolbar>
-        <button id="toggle-sidenav" mat-icon-button (click)="toggleSideNav()">
+        <button id="toggle-sidenav"
+                mat-icon-button
+                (click)="toggleSideNav()">
           <mat-icon *ngIf="!sidenav.opened">menu</mat-icon>
           <mat-icon *ngIf="sidenav.opened">close</mat-icon>
         </button>
         <div class="spacer"></div>
         <span class="title">Articlestore</span>
         <div class="spacer"></div>
-        <button id="menu-button" mat-icon-button [matMenuTriggerFor]="menu">
+        <button id="menu-button"
+                mat-icon-button
+                [matMenuTriggerFor]="menu">
           <mat-icon>more_vert</mat-icon>
         </button>
       </mat-toolbar>
@@ -33,16 +43,24 @@
   </mat-sidenav-container>
 
   <mat-menu #menu="matMenu">
-    <button id="language-button" mat-menu-item [matMenuTriggerFor]="languages">
+    <button id="language-button"
+            mat-menu-item
+            [matMenuTriggerFor]="languages">
       <mat-icon>language</mat-icon>
+      <span>{{'app.language' | translate}}</span>
     </button>
-    <button mat-menu-item (click)="switchTheme()">
+    <button mat-menu-item
+            (click)="switchTheme()">
       <mat-icon>{{ isDarkTheme ? "dark_mode" : "light_mode" }}</mat-icon>
+      <span>{{'app.theme' | translate}}</span>
     </button>
   </mat-menu>
 
   <mat-menu #languages="matMenu">
-    <button id="{{language}}-button" mat-menu-item *ngFor="let language of getAvailableLanguages()" (click)="switchLanguage(language)">{{language |
+    <button id="{{language}}-button"
+            mat-menu-item
+            *ngFor="let language of getAvailableLanguages()"
+            (click)="switchLanguage(language)">{{language |
       translate}}</button>
   </mat-menu>
 </div>
