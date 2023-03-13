@@ -1,14 +1,16 @@
 ﻿using ArticleStore.Services.Interfaces;
+using Newtonsoft.Json;
+using System;
 using System.Collections.Generic;
 using System.Threading.Tasks;
 
 namespace ArticleStore.Services
 {
-    public class ArticlesService : IArticleService
+    public class ArticleService : IArticleService
     {
         private readonly IApplicationDbService _applicationDbService;
 
-        public ArticlesService(IApplicationDbService applicationDbService)
+        public ArticleService(IApplicationDbService applicationDbService)
         {
             _applicationDbService = applicationDbService;
         }
@@ -40,6 +42,20 @@ namespace ArticleStore.Services
         public async Task UpdateOrCreateArticleAsync(AggregatedArticle article)
         {
             await _applicationDbService.UpdateOrCreateArticleAsync(article);
+        }
+
+        public static bool TryDeserializeArticles(string json, out Article[] articles)
+        {
+            try
+            {
+                articles = JsonConvert.DeserializeObject<Article[]>(json);
+                return true;
+            }
+            catch
+            {
+                articles = Array.Empty<Article>();
+                return false;
+            }
         }
     }
 }

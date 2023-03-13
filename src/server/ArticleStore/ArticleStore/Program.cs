@@ -28,14 +28,14 @@ namespace ArticleStore
             {
                 options.AddPolicy("CorsPolicy",
                 policy => policy
-                .WithOrigins("http://localhost:5000"));
+                .WithOrigins("http://localhost:5000", "http://localhost:4200"));
             });
 
             builder.Services.AddDbContext<ApplicationDbContext>(
                 options => options.UseNpgsql(builder.Configuration.GetConnectionString("Default")), ServiceLifetime.Singleton);
             builder.Services.AddDatabaseDeveloperPageExceptionFilter();
             builder.Services.AddSingleton<IApplicationDbService, ApplicationDbService>();
-            builder.Services.AddSingleton<IArticleService, ArticlesService>();
+            builder.Services.AddSingleton<IArticleService, ArticleService>();
 
             var app = builder.Build();
             var articleService = app.Services.GetService<IArticleService>();

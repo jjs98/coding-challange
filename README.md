@@ -24,3 +24,11 @@ Build for linux Amd64
 - [EntityFramework for PostgreSQL](https://www.nuget.org/packages/Npgsql.EntityFrameworkCore.PostgreSQL/)
 - [Docker PostgreSQL](https://hub.docker.com/_/postgres)
 - [Docker Adminer](https://hub.docker.com/_/adminer)
+
+## Tests
+
+### Client
+Todo
+
+### Backend
+Unittests are located in the ArticleStore.UnitTests.csproj

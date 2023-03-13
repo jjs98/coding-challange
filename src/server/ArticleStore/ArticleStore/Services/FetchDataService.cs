@@ -40,25 +40,10 @@ namespace ArticleStore.Services
             var uri = new Uri("https://christ-coding-challenge.test.pub.k8s.christ.de/Article/GetArticles");
 
             var json = await _client.GetStringAsync(uri);
-            if (json != null && TryDeserializeArticles(json, out var articles))
+            if (json != null && ArticleService.TryDeserializeArticles(json, out var articles))
             {
                 var aggregatedArticles = AggregationService.AggregateArticles(articles);
                 await UpdateArticlesAsync(aggregatedArticles);
-            }
-        }
-
-        private bool TryDeserializeArticles(string json, out Article[] articles)
-        {
-            try
-            {
-                articles = JsonConvert.DeserializeObject<Article[]>(json);
-                return true;
-            }
-            catch (Exception ex)
-            {
-                _logger.LogError(ex, "An error occured while deserialize the json.");
-                articles = Array.Empty<Article>();
-                return false;
             }
         }
 

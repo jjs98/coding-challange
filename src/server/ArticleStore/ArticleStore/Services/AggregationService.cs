@@ -38,12 +38,12 @@ namespace ArticleStore.Services
             };
         }
 
-        private static string GetAttribute(string key, Article article)
+        internal static string GetAttribute(string key, Article article)
         {
             return article.Attributes.FirstOrDefault(x => x.Key == key)?.Value;
         }
 
-        private static IEnumerable<AggregatedAttribute> AggregateAttribute(string key, IEnumerable<Attribute> attributes)
+        internal static IEnumerable<AggregatedAttribute> AggregateAttribute(string key, IEnumerable<Attribute> attributes)
         {
             var attributesForKey = attributes.Where(x => x.Key == key);
             foreach (var attribute in attributesForKey)
